@@ -4,7 +4,7 @@ window.addEventListener("load", function(event) {
 
     "use strict";
 
-      //// FUNCTIONS ////
+      // FUNCTIONS 
     
   
     var render = function() {
@@ -33,5 +33,13 @@ var display = new Display(document.querySelector('canvas'));
 var game = new Game();
 
 var engine = new Engine (1000/30, render, update);
+
+window.addEventListener("resize", display.handleResize);
+window.addEventListener("keydown", controller.handleKeyDownUp);
+window.addEventListener("keyup", controller.handleKeyDOwnUp);
+
+display.resize();
+engine.start();
+
 
 });
