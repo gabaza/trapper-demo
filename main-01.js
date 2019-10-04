@@ -37,5 +37,4 @@ window.addEventListener("keyup", controller.handleKeyDOwnUp);
 display.resize();
 engine.start();
 
-
 });
